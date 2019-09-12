@@ -29,5 +29,5 @@ func Handle(req []byte) string {
 	}
 
 	// 実行したコマンドの結果を出力
-	fmt.Sprint("%s\n%s", string(out_ls), string(out_ps))
+	return fmt.Sprintf("%s\n%s", string(out_ls), string(out_ps))
 }
