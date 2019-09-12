@@ -19,11 +19,11 @@ func Handle(req []byte) string {
 
 	// return fmt.Sprintf("Go serverless on Unubo Cloud. %s", string(req))
 
-	out_ls, err := exec.Command("ls -l").Output()
+	out_ls, err := exec.Command("ls", "-l").Output()
 	if err != nil {
 		fmt.Println("Command Exec Error.")
 	}
-	out_ps, err := exec.Command("ps aux").Output()
+	out_ps, err := exec.Command("ps", "aux").Output()
 	if err != nil {
 		fmt.Println("Command Exec Error.")
 	}
